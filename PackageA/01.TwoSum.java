@@ -14,7 +14,7 @@ import java.util.Map;
  *
  *
  */
-class SolutionOne {
+class TowSum {
 
 
     public static  int[] twoSum(int[] inputArray , int target ) {

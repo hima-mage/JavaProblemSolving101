@@ -19,7 +19,7 @@ import java.util.Stack;
  *      1.any open parentheses we push it to stack
  *      2.any closing
  */
-class  SolutionTwo {
+class  CheckBalancedParentheses {
 
     // i will use map (hasmap) to set parenthesis to check my char if it's valide or not
     static Map<Character , Character> map = new HashMap<Character , Character>();
@@ -75,8 +75,8 @@ class  SolutionTwo {
     }
 
     public static void main(String[] args) {
-        Boolean output1 = SolutionTwo.validateExpression("{()}");
-        Boolean output2 = SolutionTwo.validateExpression("{(");
+        Boolean output1 = CheckBalancedParentheses.validateExpression("{()}");
+        Boolean output2 = CheckBalancedParentheses.validateExpression("{(");
 
 
         System.out.println(output1);
