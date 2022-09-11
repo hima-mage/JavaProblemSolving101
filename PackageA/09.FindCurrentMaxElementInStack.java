@@ -21,25 +21,39 @@ class FindMaxElementInStack {
     Stack<Integer> mainStack = new Stack<Integer>();
     Stack<Integer> maxStack = new Stack<Integer>();
 
-    public   void push(int input) {
+    /**
+     * iam pushing element into mainStack
+     * check if the maxstack is empty or it's peek element is less than the inserted element then push it to the stack
+     * @param input
+     */
+    public  void push(int input) {
 
-        mainStack.push(input);
-        if(maxStack.isEmpty() || input >= maxStack.peek()){
-            maxStack.push(input);
+        mainStack.push(input); // push() O(1)
+        if(maxStack.isEmpty() || input >= maxStack.peek()){ // isEmpty() O(1) , peek() O(1)
+            maxStack.push(input); // push() O(1)
         }
     }
 
+    /**
+     *  pop last element of the main stack and then check the peek element of the maxstack is equal then pop it also ,
+     *  and return the popedElement
+     * @return
+     */
     public int pop() {
-        int popedElement = mainStack.pop();
+        int popedElement = mainStack.pop();// pop() O(1)
 
-        if(maxStack.peek() == popedElement) {
-            maxStack.pop();
+        if(maxStack.peek() == popedElement) {  // peek() O(1)
+            maxStack.pop();// pop() O(1)
         }
         return popedElement;
     }
 
+    /**
+     * find the max by pop the last element of the stack
+     * @return
+     */
     public  int max() {
-        return  maxStack.peek();
+        return  maxStack.peek(); // peek() O(1)
     }
 
     public static void main(String[] args) {
